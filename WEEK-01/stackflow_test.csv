@@ -1,0 +1,418 @@
+query,Y
+"Title: I want to update column entire record of BOOKDATE_TO from my below query USING ORACLE PLSQL using loop or procedureQuery: Here is the code I want book date_to to be updated I want a proper plsql code using procedure or loop that updated entire records of column book date_to
+
+    SELECT
+        r.resource_id,
+        r.type,
+        r.resort_id,
+        r.parent_id,
+        r.code,
+        r.name,
+        r.path,
+        r.cashflowmanager_id,
+        c.bookdate_from,
+        c.bookdate_to,
+        c.usage_date_from,
+        c.usage_date_to
+    FROM
+        resourcebasei18n   r
+        JOIN cashflowrule       c ON ( r.cashflowmanager_id = c.cashflowmanager_id )
+    WHERE
+        name = '4-Persoons Ranchtent'
+        AND ( c.usage_date_from BETWEEN '01-APR-20' AND '01-MAY-20'
+              OR c.usage_date_to BETWEEN '01-APR-20' AND '01-MAY-20' );",LQ_EDIT
+"Title: Missing a using directive or an assembly reference for .ToList()Query: <p>I have this code in the class constructor.</p>
+
+<pre><code>this._images = images.Split('#').ToList();
+</code></pre>
+
+<p>It has always worked, but now it gives this error:</p>
+
+<blockquote>
+  <p>Error CS1061  'string[]' does not contain a definition for 'ToList' and no extension method 'ToList' accepting a first argument of type 'string[]' could be found (are you missing a using directive or an assembly reference?).</p>
+</blockquote>
+
+<p>What can I do to make it work?</p>
+",LQ_CLOSE
+"Title: python - problem with output - iterate over dictionaryQuery: <p>I want to print('Doesn't exist') when the input is not a key in dictionary, it looks like its checking every single key in dictionary and prints if its there or not. I would like to ask if its possible to get output only one time if  dictionary doesn't' contain input. </p>
+
+<pre><code>number = input('Number: ')
+
+data = {
+        '1' : 'One',
+         '2' : 'Two',
+         '3' : 'Three',
+
+        }
+
+number = number.upper()
+for a, value in data.items():
+    if a == number:
+        print(number, "":"", value)
+    else:
+         print('Doesnt exist here')
+
+Number: 1
+1 : One
+Doesnt exist here
+Doesnt exist here
+</code></pre>
+",LQ_CLOSE
+"Title: Perl get Value of a Hash in a HashQuery: i have a hash in perl and i dont know what its content looks like. When i print out its keys and values (check attached hash loop picture) i get for values what looks like a string that contains another hash for each value (check output of hash loop picture). How can i print out the keys and values for these hashes?
+
+[output of hash loop][1]
+
+[hash loop][2]
+
+
+  [1]: https://i.stack.imgur.com/jAeG4.png
+  [2]: https://i.stack.imgur.com/erYFe.png",LQ_EDIT
+"Title: Should I Unsubscribe reactive form's valueChanges?Query: <p>Is it necessary to unsubscribe reactive form control's valueChanges subscription or Angular will unsubscribe it for us ?</p>
+
+<p>In <strong>Router</strong> : <br>
+According to the official documentation, Angular should unsubscribe for you, but apparently, there is a <a href=""https://github.com/angular/angular/issues/16261"" rel=""noreferrer"">bug</a>.</p>
+
+<p>So my concern here is the same for FormControl's valueChanges.</p>
+",HQ
+"Title: How to Select and click button to login to web page using Python Selenium (Beginner in Selenium)Query: [![HTML code for button ][1]][1]
+
+
+  [1]: https://i.stack.imgur.com/W1J6n.png
+
+
+
+How can I click on ""Sign In"" button to login to the web page as I am not getting any valid id to click on it",LQ_EDIT
+"Title: A module needs a subroutine located in another module - fortranQuery: I have a problem like this:
+
+ 1. main.f90 --> contains MAIN file
+ 2. sub_A.f90 --> contains subroutine A
+ 3. sub_B.f90 --> contains subroutine B
+ 4. other_stuffs.f90 --> contains all functions required by points 2 and 3. 
+
+All four points are written separately.
+
+**main.f90**
+
+    include sub_A.f90
+    include sub_B.f90
+    include other_stuffs.f90
+    
+    program MAIN
+    use A
+    use B
+    use other
+         ...
+         call proc_A   
+         call_proc_B
+    end program MAIN
+
+**sub_A.f90**
+
+    module A
+        subroutine proc_A
+        use other             !my assumption didn't work
+        ...
+            call compute_something_1
+        end subroutine proc_A
+    end module A
+
+**sub_B.f90**
+
+    module B  
+        subroutine proc_B
+        use other             !my assumption didn't work
+        ...
+            call compute_something_2
+        end subroutine proc_B
+    end module B
+
+**other_stuffs.f90**
+
+    module other  
+        subroutine compute_something_1
+        ...
+        end subroutine compute_something_1
+    
+        subroutine compute_something_2
+        ...
+        end subroutine compute_something_2
+    end module other
+
+Unfortunately, it didn't work. Did I do something wrong? Thanks in advance.
+",LQ_EDIT
+"Title: VS2015 pubxml: how to exclude or eliminate the <PublishDatabaseSettings> sectionQuery: <p>I need to exclude database related settings from the Web Deploy publishing. I tried to delete the  section in the pubxml file, but it comes back when I create a deployment package.</p>
+
+<p>Is there any way way to exclude database related settings from the Web Deploy publishing?</p>
+",HQ
+"Title: Swift full date with millisecondsQuery: <p>Is any way to print full date with milliseconds?</p>
+
+<p>For example, I'm doing this:</p>
+
+<pre><code>print(""\(NSDate())"")
+</code></pre>
+
+<p>But I'm just get this:</p>
+
+<pre><code>2016-05-09 22:07:19 +0000
+</code></pre>
+
+<p>How can I get the milliseconds too in the full date?</p>
+",HQ
+"Title: Neural network weird predictionQuery: <p>I try to implement a neural network. I'm using backpropagation to compute the gradients. After obtaining the gradients, I multiply them by the learning rate and subtract them from the corresponding weights. (basically trying to apply gradient descent, please tell me if this is wrong).
+So the first thing I tried after having the backpropagation and gradient descent ready, was to train a simple XOR classifier where the inputs can be (0,0), (1,0), (0,1), (1,1) and the corresponding outputs are 0, 1, 1, 0. So my neural network contains 2 input units, 1 output unit and one hidden layer with 3 units on it. When training it with a learning rate of 3.0 for >100 (even tried >5000), the cost drops until a specific point where it gets stuck, so it's remaining constant. The weights are randomly initialized each time I run the program, but it always gets stuck at the same specific cost. Anyways, after the training is finished I tried to run my neural network on any of the above inputs and the output is always 0.5000. I thought about changing the inputs and outputs so they are : (-1,-1), (1, -1), (-1, 1), (1, 1) and the outputs -1, 1, 1, -1. Now when trained with the same learning rate, the cost is dropping continuously, no matter the number of iterations but the results are still wrong, and they always tend to be very close to 0. I even tried to train it for an insane number of iterations and the results are the following: [ iterations: (20kk), inputs:(1, -1), output:(1.6667e-08) ] and also [iterations: (200kk), inputs:(1, -1), output:(1.6667e-09) ], also tried for inputs(1,1) and others, the output is also very close to 0. It seems like the output is always mean(min(y), max(y)), it doesn't matter in what form I provide the input/output. I can't figure out what I'm doing wrong, can someone please help?</p>
+",LQ_CLOSE
+"Title: C++ how to handle class types when writing a scripting languageQuery: <p>I've been stumped by this for some time although I believe it may be quite simple. I am writing a simple programming language in c++ and I can't figure out the best way to handle variable types withing my language.</p>
+
+<p>For example I may have eight different variable types including string, number, bool, table, etc! I need to know the best way to store these within c++ because they are all different types, which means all different classes! I will have many more than eight types though. The code is line based with a compiler. Please help!</p>
+",LQ_CLOSE
+Title: How to get/return viewtype in use from adapter in androidQuery: is there a way I can get/return a `View` in my case a `RecyclerView` from the `Adapter` using it so as to reuse it in another `Activity`. And if possible how can I then re use it in the `Activity`?Without re-referencing it a new in the `Activity`,LQ_EDIT
+"Title: How to fix commit order in GitHub pull requests, broken by git rebase?Query: <p>When I write code I break it into small logical changes that are easy and quick to review.</p>
+
+<p>To do so, I use <code>git rebase -i</code> (interactive) to squash, drop and change order of commits.</p>
+
+<p>I've noticed this sometimes leads to a different order of commits on a GitHub pull request (though the order is retained on the remote branch). </p>
+
+<p>For example,</p>
+
+<ul>
+<li>commit 1</li>
+<li>commit 2</li>
+<li>commit 3</li>
+</ul>
+
+<p>might show up in the PR as:</p>
+
+<ul>
+<li>commit 3</li>
+<li>commit 1</li>
+<li>commit 2</li>
+</ul>
+
+<p>I've searched the internet and only managed to find this GitHub help page: <a href=""https://help.github.com/articles/why-are-my-commits-in-the-wrong-order/"" rel=""noreferrer"">Why are my commits in the wrong order?</a> Their answer:</p>
+
+<blockquote>
+  <p>If you rewrite your commit history via git rebase or a force push, you
+  may notice that your commit sequence is out of order when opening a
+  pull request.</p>
+  
+  <p>GitHub emphasizes Pull Requests as a space for discussion. All aspects
+  of it--comments, references, and commits--are represented in a
+  chronological order. Rewriting your Git commit history <a href=""https://help.github.com/articles/about-git-rebase"" rel=""noreferrer"">while
+  performing rebases</a> alters the space-time continuum, which means
+  that commits may not be represented the way you expect them to in the
+  GitHub interface.</p>
+  
+  <p>If you always want to see commits in order, we recommend not using
+  <code>git rebase</code>. However, rest assured that nothing is broken when you
+  see things outside of a chronological order!</p>
+</blockquote>
+
+<p>Is there a way to work around this?</p>
+",HQ
+"Title: General android programming guide linesQuery: <p>I have been programming on android for the past few months and have hit a point where I comprehend the basic ideas and principles for Android development. </p>
+
+<p>Currently I think that my code lacks the appropriate structure and clearance that is required in order for your code to be readable. I know this because sometimes even I find it hard to read my code - and I am not talking about the variable or classes names. I am talking about for example when I open a big ( lengthy ) activity and have 5 overriden methods, 5 more and tons of global variables, a couple of inner-classes and so on it gets hard to find stuff in.</p>
+
+<p>Therefore I have been looking for some guide lines for how to do this so that the code looks good and is readable but I haven't been able to. </p>
+
+<p>There are also small problems to which I find hard to find an answer and usually go with what i feel like rather than knowing for sure what is right in the situation. For example what is better - having the activity implement onClickListener and then having a big switch statement, or just creating new listener for every UI element. </p>
+
+<p>I was hoping some of you might know a place where I can find answers for questions like this. If there is not I will start adding the questions here.</p>
+
+<p>Thank you </p>
+",LQ_CLOSE
+"Title: Glide Cache does not persist when app is killedQuery: <p>I'm monitoring my web calls with Charles.</p>
+
+<p>I have a GlideModule changing cache folder by overriding applyOption(...) like this : </p>
+
+<pre><code>    @Override
+public void applyOptions(Context context, GlideBuilder builder) {
+    builder.setDiskCache(
+            new InternalCacheDiskCacheFactory(context, ""/media/"", 1500000)
+    );
+}
+</code></pre>
+
+<p>Then, I do my Glide images loads and the cache works just fine while I'm in the app. Here is an example : </p>
+
+<pre><code>Glide.with(this)
+            .load(""http://www.wired.com/wp-content/uploads/2015/09/google-logo.jpg"")
+            .into(mImageView);
+</code></pre>
+
+<p>Only the first call make a web call and then it use cache to retrieve it.
+However, if I kill the app then relaunch it, instead of continuing to use the cache, the app make a new web call.
+Isn't the cache supposed to be persistent inside the Internal storage ? </p>
+",HQ
+"Title: Formula for deleting vectors?Query: Basically, I have a vector of a struct. I'm making the game Monopoly and I have a vector of a playerStruct. I have an option for a player to leave the game. However, I don't know how to delete any player as the vector becomes smaller and smaller. For example I have 3 players
+
+    Players 0,1,2
+And I use the erase function, 
+
+    erase(vect.begin()+turnNumber;
+I first erase player 0 which is just erase(vect.begin()+0) and erases the first element. However, if I try to erase player 1 (vect.begin()+1) I end up erasing player 2 as the vector has shrunk to a size of 2.
+TDLR: **How do I erase a player at any point while the vector decreases? I can't seem to think of a formula erase(vect.begin()+(a number)) to be able to erase any player from the game without erasing another player that isn't meant to be erased.**
+Thank you.",LQ_EDIT
+"Title: How to print the 1398th prime number in python?Query: <p>hey guys i'm newbie please tell me how to make this code work to print the 1398th prime number.
+<a href=""https://code.sololearn.com/c1a3lvSiIF9w/?ref=app"" rel=""nofollow noreferrer"">https://code.sololearn.com/c1a3lvSiIF9w/?ref=app</a></p>
+
+<pre><code>#newbie
+def IsPrime(X):
+  IsPrime = 1
+  for i in range(2):
+    if i &lt; X:
+      if X % i == 0:
+        IsPrime = 0
+        if IsPrime == 0:
+          print (""X Is Prime"")
+        else:
+          print (""X Is Not Prime"")
+      else:
+        i = i + 1
+    else:
+      if IsPrime == 0:
+        print (""X Is Prime"")
+      else:
+        print (""X Is Not Prime"")
+#newbie
+
+for i in range(2):
+  C = 0
+  if C &lt; 1398:
+    if IsPrime(i) == 1:
+      C = C + 1
+      i = i + 1
+    else:
+      i = i + 1
+  else:
+    print (i - 1)
+#newbie
+</code></pre>
+",LQ_CLOSE
+"Title: d3.js v4: How to access parent group's datum index?Query: <p>The description of the <code>selection.data</code> function includes an example with multiple groups (<a href=""https://github.com/d3/d3-selection/blob/master/README.md#selection_data"">link</a>) where a two-dimensional array is turned into an HTML table.</p>
+
+<p>In d3.js v3, for lower dimensions, the accessor functions included a third argument which was the index of the parent group's datum:</p>
+
+<pre><code>td.text(function(d,i,j) {
+  return ""Row: "" + j;
+});
+</code></pre>
+
+<p>In v4, this <code>j</code> argument has been replaced by the selection's NodeList. How do I access the parent group's datum index now?</p>
+",HQ
+"Title: webpack live hot reload for sassQuery: <p>I am building a workflow for a react starter and would like to have my browser auto reload when I make a change to my scss files.</p>
+
+<p>Currently, webpack will hot reload when I make a change in my index.js file (set as my entry point).  However when I change/add scss code in my scss file, it gets compiled, but the css doesn't get output anywhere and does not trigger a browser reload.  </p>
+
+<p>I am new to webpack would really appreciate some insight here.</p>
+
+<p>Here is my webpack.config.js</p>
+
+<pre><code>const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+    entry: ['./src/js/index.js', './src/scss/style.scss'],
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'js/index_bundle.js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].css',
+                            outputPath: 'css/'
+                        }
+                    },
+                    {
+                        loader: 'extract-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html'    
+        })
+    ]
+}
+</code></pre>
+
+<p>My index.js entry point file</p>
+
+<pre><code>import React from 'react';
+import ReactDOM from 'react-dom';
+import App from '../components/App';
+
+
+ReactDOM.render(
+    &lt;App/&gt;,
+    document.getElementById('App')
+);
+</code></pre>
+
+<p>And my App component</p>
+
+<pre><code>import React, {Component} from 'react';
+import '../../dist/css/style.css';
+
+
+
+class App extends Component {
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;Test&lt;/p&gt;         
+            &lt;/div&gt;
+        )
+    }
+}
+
+export default App;
+</code></pre>
+",HQ
+"Title: How do I enter into another form by clicking 5 buttons?Query: <p>I'm trying to write a code in Java. I've created a form where I have to type a code by clicking the buttons I've created. So, when I type btn1, btn2, btn3, btn4 and btn5 and then I click the 'Enter' button, it will lead me to the form i want. I've tried many different options but I just can't find a way to go through it. If somebody could help me, I'd be so thankful.
+P.s I'm new at Java, so forgive me if i could'nt explain the thing properly.</p>
+
+<pre><code> private void btnEnterStateChanged(javax.swing.event.ChangeEvent evt) {                                      
+        // TODO add your handling code here:
+       if(btn1.isSelected() &amp;&amp; btn2.isSelected()
+    &amp;&amp; btn3.isSelected() &amp;&amp; btn4.isSelected() &amp;&amp; btn4.isSelected())
+           {
+                   LoginForm login = new LoginForm();
+                   login.setVisible(true);
+              }
+else {
+                    JOptionPane.showMessageDialog(this, 
+                    ""Wrong code!"");
+      }
+    }
+</code></pre>
+",LQ_CLOSE
